@@ -50,7 +50,7 @@ Done.
 
 ### Actual Results
 
-Script execution halts prematurely, typically after the third library is included:
+Script execution hangs prematurely, typically after the third library is included:
 
 ```
 ./colors.js
@@ -61,9 +61,12 @@ Loading all Libraries...
 ✓ yellow
 ```
 
+Command execution must be halted by the user (ex., by pressing `Control-C` at the command line).
+
 ## Notes
 
-The `colors-some.js` script only instantiates three libraries:
+* The same behavior is reproducible by running `colors.js` (minus the hashbang line) in **Script Editor.app**
+* The `colors-some.js` script only instantiates three libraries:
 
 ```
 ./colors-some.js
