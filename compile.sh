@@ -1,10 +1,7 @@
 FILENAME_SCRIPT="`pwd`/${BASH_SOURCE:-$0}"
 DIR_AUTOMATION=`dirname $FILENAME_SCRIPT`
 
-if [ ! -e "$HOME/Library/Script Libraries/" ]; then
-	echo "Please create '$HOME/Library/Script Libraries/' first"
-	exit;
-fi
+mkdir -p "$HOME/Library/Script Libraries/"
 
 compile()
 {
